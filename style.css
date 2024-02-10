@@ -30,14 +30,14 @@ body {
     width: 90%;
     height: 5em;
     background-color: rgb(10, 2, 24);
+    text-align: right;
+    overflow: hidden;
 }
 
 span {
-    margin: auto 0;
     padding: 0 10px;
-    display: block;
+    display: inline-block;
     font-size: 3em;
-    text-align: right;
     line-height: 1.5;
 }
 
