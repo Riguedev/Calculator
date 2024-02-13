@@ -1,7 +1,10 @@
+import calculator from "./calculator.js"
+
 const keys =  document.getElementsByClassName('number')
 const screen = document.getElementById('screen')
 const deletKey = document.getElementById('D')
 const deleteAll = document.getElementById('C')
+const equal = document.getElementById('equal')
 let screenNumbers = []
 
 const addNumber = () => {
@@ -35,4 +38,10 @@ deleteAll.addEventListener('click', () => {
     }
     screenNumbers = []
     console.log(screenNumbers)
+})
+
+equal.addEventListener('click', () => {
+    let lista = document.getElementsByClassName('delete')
+    let textos = Array.from(lista).map(elemento => elemento.innerHTML);
+    console.log(calculator.results(calculator.selectOperation(textos), calculator.createNumbers(textos)))    
 })
