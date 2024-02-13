@@ -2,6 +2,7 @@ const keys =  document.getElementsByClassName('number')
 const screen = document.getElementById('screen')
 const deletKey = document.getElementById('D')
 const deleteAll = document.getElementById('C')
+const equal = document.getElementById('equal')
 let screenNumbers = []
 
 const addNumber = () => {
@@ -31,8 +32,27 @@ deleteAll.addEventListener('click', () => {
     for (let i = 0; i < screenNumbers.length; i++) {
         const lastDeleteNumber = deleteNumbers[deleteNumbers.length - 1]
         lastDeleteNumber.parentNode.removeChild(lastDeleteNumber);
-        console.log(screenNumbers)
+    
     }
     screenNumbers = []
-    console.log(screenNumbers)
+    console.log(screenNumbers.length)
+})
+
+equal.addEventListener('click', () => {
+    const lista = document.getElementsByClassName('delete')
+    const textos = Array.from(lista).map(elemento => elemento.innerHTML);
+    console.log(calculator.results(calculator.selectOperation(textos), calculator.createNumbers(textos)))
+
+
+    for (let i = 0; i < screenNumbers.length; i++) {
+        const lastDeleteNumber = lista[lista.length - 1]
+        lastDeleteNumber.parentNode.removeChild(lastDeleteNumber);
+    }
+    screenNumbers = []
+
+    const result = document.createElement('span')
+    result.classList.add('delete')
+    result.innerText = calculator.results(calculator.selectOperation(textos), calculator.createNumbers(textos))
+    screen.appendChild(result)
+    screenNumbers.push(result.innerHTML)
 })
