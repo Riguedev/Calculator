@@ -1,2 +1,5 @@
 test.js
 operation.js
+calculatorTest.js
+node_modules
+package-lock.json

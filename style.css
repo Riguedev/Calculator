@@ -21,6 +21,7 @@ body {
     background-color: rgb(20, 9, 51);
     border: 1px solid rgba(255, 255, 255, 0.562);
     border-radius: 2em;
+    max-width: 500px;
 }
 
 .screen {
@@ -35,10 +36,11 @@ body {
 }
 
 span {
-    padding: 0 10px;
+    margin: 0;
+    padding: 0;
     display: inline-block;
-    font-size: 3em;
-    line-height: 1.5;
+    font-size: 2em;
+    line-height: 2.5;
 }
 
 .keyboard {
@@ -70,3 +72,38 @@ span {
     transition: 0.5s;
 }
 
+@media screen and (min-width: 300px) {
+    .calculator {
+        margin: 100px auto;
+        padding: 50px 5px;
+        width: 95%;
+        background-color: rgb(20, 9, 51);
+        border: 1px solid rgba(255, 255, 255, 0.562);
+        border-radius: 2em;
+        max-width: 500px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .calculator {
+        margin: 100px auto;
+        padding: 50px 10px;
+        width: 80%;
+        background-color: rgb(20, 9, 51);
+        border: 1px solid rgba(255, 255, 255, 0.562);
+        border-radius: 2em;
+        max-width: 500px;
+    }
+}
+
+@media screen and (min-width: 1200px) { 
+    .calculator {
+        margin: 100px auto;
+        padding: 50px 10px;
+        width: 40%;
+        background-color: rgb(20, 9, 51);
+        border: 1px solid rgba(255, 255, 255, 0.562);
+        border-radius: 2em;
+        max-width: 500px;
+    }
+}
